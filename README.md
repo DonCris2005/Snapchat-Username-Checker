@@ -100,6 +100,11 @@ To check for updates and new features, you can also revisit the [Releases](https
 
 ![Username Checker](https://example.com/screenshot.png)
 
+## Distributed Mode
+
+You can now distribute username checks across multiple servers. Run the `server` binary on each machine and set the `SERVERS` environment variable on the client with a comma-separated list of server URLs (e.g. `http://ip1:8080,http://ip2:8080`).
+The client will automatically detect available servers, split the target list and goroutines equally, and collect the results.
+
 ## Technologies Used
 
 - **Go**: The primary programming language for building this tool.
